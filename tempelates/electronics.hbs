@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        {{!-- <button ></button> --}}
+        <h1 id="one">WELCOME   &nbsp;  TO  &nbsp;  THAPAREX - <br> College Exchange Portal</h1>
+        <h2 id="one">Buy and Sell Items Within Your College Community</h2>
+        {{!-- <img  src="thaparexlogo.jpg"alt=""> --}}
+        <img id="pic" src="images/thaparexlogo.jpg" accept="image/jpeg" alt="">
+    </header>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="search()">Search</button>
+         <button class  ="logout-button" id="logout-btn"><a href="/logout">logout</a></button>
+    </div>
+   
+    <nav>
+        <a href="#">Electronics</a>
+        <a href="#">Sports Fitness Equipment</a>
+        <a href="#>Study Materials</a>
+        <a href="#">Vehicles</a>
+        <a href="#">Miscellaneous</a>
+    </nav> 
+    
+<div class="add-product-form">
+    <input type="text" id="productPrice" placeholder="Product Price">
+    <input type="text" id="productDescription" placeholder="Product Description">
+    <input type="file" id="productImage" accept="image/png,image/jpeg">
+    {{!-- <input accept="image/png, image/jpeg" type="file" multiple="" autocomplete="off" id="productImage" style="display: none;"> --}}
+    {{!-- <button id="add-image">Add image</button> --}}
+    <button id="addProductButton">Add Products</button>
+</div>
+
+<ul id="productList"></ul>
+<div id="miscellaneous">
+Miscellaneous
+</div>
+    <section id="electronics" class="category">
+        <h2>Electronics</h2>
+        <div class="subcategory">
+            <fieldset> 
+            <h3>Laptops</h3>
+            <div class="product-container">
+                <!-- Product Listing for Laptops -->
+                <div class="product">
+                    <img src="images/laptop1.jpeg" alt="Laptop" >
+                   <!-- Update the link for each laptop -->
+<a href="reviews.html" class="product-link" data-product="laptop1">
+    <p>Click Here</p>
+</a>               
+                    <p>Description: Powerful laptop for all your computing needs.</p>
+                    <p>Price: $800</p>
+                    <p>Seller: John Doe</p>
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn">Add to Wishlist</button>
+                </div>
+                <!-- Additional Laptop Images -->
+                <div class="product">
+                    <img src="images/laptop2_177x236_1_50.jpeg" alt="Laptop 2">
+                    <p>Description: Additional laptop description.</p>
+                    <p>Price: $900</p>
+                    <p>Seller: Jane Smith</p>
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn">Add to Wishlist</button>&nbsp
+                </div> &nbsp
+                &nbsp
+                
+                <div class="product">
+                    <img src="images/laptop3_177x236.jpeg" alt="Laptop 3">
+                    <p>Description: Another additional laptop description.</p>
+                    <p>Price: $950</p>
+                    <p>Seller: Mike Johnson</p>
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="images/laptop4_177x236.jpeg" alt="Laptop 4">
+                    <p>Description: Yet another additional laptop description.</p>
+                    <p>Price: $850</p>
+                    <p>Seller: Emily Brown</p>
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn">Add to Wishlist</button>
+                </div>
+                <div class="product">
+                    <img src="images/laptop5.jpeg" alt="Laptop 5">
+                    <p>Description: Final additional laptop description.</p>
+                    <p>Price: $920</p>
+                    <p>Seller: Mark Taylor</p>
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn">Add to Wishlist</button>
+                </div>
+            </div>
+
+        </div>
+    </fieldset>
+    </section>
+    
+
+
+    <div class="subcategory">
+        <h3>Smartphones</h3>
+        <!-- Product Listing for Smartphones -->
+        <div class="product">
+            <img src="images/smartphone_image.jpg" alt="Smartphone">
+            <p>Description: High-performance smartphone with advanced features.</p>
+            <p>Price: $500</p>
+            <p>Seller: Jane Smith</p>
+            <button class="btn">Add to Cart</button>
+            <button class="btn">Add to Wishlist</button>
+        </div>
+        <!-- Additional Smartphone Images -->
+        <img src="images/smartphone_image_2.jpg" alt="Smartphone 2">
+        <img src="images/smartphone_image_3.jpg" alt="Smartphone 3">
+        <img src="images/smartphone_image_4.jpg" alt="Smartphone 4">
+        <img src="images/smartphone_image_5.jpg" alt="Smartphone 5">
+    </div>
+
+    <div class="subcategory">
+        <h3>Tablets</h3>
+        <!-- Product Listing for Tablets -->
+        <div class="product">
+            <img src="images/tablet_image.jpg" alt="Tablet">
+            <p>Description: Lightweight and portable tablet for on-the-go productivity.</p>
+            <p>Price: $300</p>
+            <p>Seller: Mike Johnson</p>
+            <button class="btn">Add to Cart</button>
+            <button class="btn">Add to Wishlist</button>
+        </div>
+        <!-- Additional Tablet Images -->
+        <img src="images/tablet_image_2.jpg" alt="Tablet 2">
+        <img src="images/tablet_image_3.jpg" alt="Tablet 3">
+        <img src="images/tablet_image_4.jpg" alt="Tablet 4">
+        <img src="images/tablet_image_5.jpg" alt="Tablet 5">
+    </div>
+
+    <div class="subcategory">
+        <fieldset>
+        <h3>Headphones</h3>
+        <!-- Product Listing for Headphones -->
+        <div class="product">
+            <img src="images/headphones_image.jpg" alt="Headphones">
+            <p>Description: Over-ear headphones with immersive sound quality.</p>
+            <p>Price: $100</p>
+            <p>Seller: Emily Brown</p>
+            <button class="btn">Add to Cart</button>
+            <button class="btn">Add to Wishlist</button>
+        </div>
+        <!-- Additional Headphones Images -->
+        <img src="images/headphones_image_2.jpg" alt="Headphones 2">
+        <img src="images/headphones_image_3.jpg" alt="Headphones 3">
+        <img src="images/headphones_image_4.jpg" alt="Headphones 4">
+        <img src="images/headphones_image_5.jpg" alt="Headphones 5">
+    </div>
+    </fieldset>
+<title>Marquee Tag</title> 
+
+<div class="main"> 
+    <marquee class="marq" bgcolor="orange" 
+             direction="left" loop=""> 
+        <div class="geek1"> 
+           THANKS FOR USING THAPAREX :)
+        </div> 
+        
+        <div class="geek2">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; BUY &nbsp;&nbsp;&nbsp;SELL &nbsp;&nbsp;&nbsp;SHARE
+        </div>
+        <div class="geek2"> 
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;Thapar  Univesity   &nbsp;  &nbsp;&nbsp;Connect &nbsp; Portal
+         </div> 
+    </marquee> 
+</div> 
+
+<footer>
+    <div class="footer-container">
+        <div class="owner-info">
+            <h3>Owner: <br> Yash Kumar</h3>
+            <p>Contact: 8369843496</p>
+            <p>Email: yashkumarhoppkins@gmail.com</p>
+        </div>
+        <div class="social-media">
+            <h3><u>Follow us on:</u> </h3>
+            <a href="https://www.instagram.com/y.a.s.h__k.u.m.a.r__/" target="_blank" title="Instagram">
+          
+                <img src="images/instaa.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/channel/UCb3CFGx8isxzyp4iVY1ZL2Q" target="_blank" title="YouTube">
+                <img src="images/youtubee.jpg" alt="YouTube">
+            </a>
+        </div>
+    </div>
+</footer>
+</section>
+{{!-- <script src="src/script.js" >
+    </script> --}}
+</body>
+<style> 
+    .logout-button {
+           
+    background-color: #6daaea; /* Change the background color */
+    color: #fff; /* Change the text color */
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 150px;
+    padding: 5px 10px; /* Adjust padding to reduce size */
+    font-size: 18px; /* Adjust font size to reduce size */
+    cursor: pointer;
+    
+    top: 280px; /* Adjust as needed */
+    right: 10px; /* Position it at the extreme right */
+    position:static
+
+}   
+#pic
+{
+    width: 120px; /* Set the width of the picture */
+    height: 120px; /* Set the height of the picture */
+    background-color: #6daaea; /* Change the background color */
+    color: #fff; /* Change the text color */
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 150px;
+    padding: 5px 10px; /* Adjust padding to reduce size */
+    font-size: 8px; /* Adjust font size to reduce size */
+    cursor: pointer;
+    position: relative;
+    top: 7px; /* Adjust as needed */
+    left: 2px;
+}
+    .main { 
+        text-align: center; 
+    } 
+
+    .marq { 
+        padding-top: 30px; 
+        padding-bottom: 30px; 
+    } 
+
+    .geek1 { 
+        font-size: 36px; 
+        font-weight: bold; 
+        color: white; 
+        padding-bottom: 10px; 
+    } 
+
+    .miscellaneous {
+    display: flex;
+    flex-wrap: wrap;
+}
+ #productImage
+{
+    background-color: #ffffff; /* Change background color */
+            color: #fff; /* Change text color */
+            padding: 10px 20px; /* Adjust padding as needed */
+            border: none;
+            border-radius: 5px;
+            font-size: 15px; /* Change font size */
+            font-weight: bold; /* Add bold font */
+            text-transform: uppercase; /* Convert text to uppercase */
+            cursor: pointer;
+            display: inline-block;
+            
+            transition: background-color 0.3s ease; 
+}
+</style> 
+<script>
+    const addProductBtn = document.getElementById('addProductButton')
+function addProduct() {
+    console.log('fn called')
+    const productPrice = document.getElementById('productPrice').value;
+    console.log('fn2 called')
+    const productDescription = document.getElementById('productDescription').value;
+    console.log('fn3 called')
+    const productImageInput = document.getElementById('productImage');
+    console.log('fn4 called')
+    const productImage = productImageInput.files[0]; // Get the selected image file
+    {{!-- console.log("type of obj:  ",typeof(productImage)) --}}
+
+    {{!-- const imagePath = '/images/instaa.png';
+
+    // Create an Image element
+    const productImage = new Image();
+
+    // Set the source of the Image element to the specified path
+    productImage.src = imagePath; --}}
+
+
+    // Update the UI with the added product in the "Miscellaneous" section
+    updateMiscellaneous(productPrice, productDescription, productImage);
+
+    // Optional: You can clear the input fields after adding the product
+    document.getElementById('productPrice').value = "";
+    document.getElementById('productDescription').value = "";
+    productImageInput.value = ""; // Clear the file input
+}
+addProductBtn.addEventListener("click", () => {
+    console.log("another fn callled")
+    addProduct();
+})
+
+
+
+
+
+function updateMiscellaneous(name, description, image) {
+    // Create a new product container
+    const productContainer = document.createElement('div');
+    productContainer.classList.add('product');
+
+    // Create elements for name and description
+    const descriptionElement = document.createElement('p');
+    descriptionElement.textContent = `Description: ${description}`;
+    productContainer.appendChild(descriptionElement);
+
+    const nameElement = document.createElement('p');
+    nameElement.textContent = `Price: ${name}`;
+    productContainer.appendChild(nameElement);
+
+    
+
+    // Create an image element
+    if (image) {
+        const imageElement = document.createElement('img');
+        imageElement.src = URL.createObjectURL(image);
+        imageElement.alt = 'Product Image';
+        // Set dimensions for the image
+        imageElement.style.maxWidth = '300px';
+        imageElement.style.maxHeight = '300px';
+        productContainer.appendChild(imageElement);
+    }
+
+    // Append the new product container to the "Miscellaneous" section
+    document.getElementById('miscellaneous').appendChild(productContainer);
+}
+
+
+</script>
+</html>
