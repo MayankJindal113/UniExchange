@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body> 
+    
     <header>
         {{!-- <button ></button> --}}
         <h1 id="one">WELCOME   &nbsp;  TO  &nbsp;  THAPAREX - <br> College Exchange Portal</h1>
@@ -35,146 +37,43 @@
     {{!-- <input accept="image/png, image/jpeg" type="file" multiple="" autocomplete="off" id="productImage" style="display: none;"> --}}
     {{!-- <button id="add-image">Add image</button> --}}
     <button id="addProductButton">Add Products</button>
+
+    {{!-- <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20" >
+                    <path  style="height: 100px;width: 100px;" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg> --}}
+    <i class="fa-solid fa-cart-shopping"></i>
+
 </div>
 
-<ul id="productList"></ul>
-<div id="miscellaneous">
-Miscellaneous
-</div>
-    <section id="electronics" class="category">
-        <h2>Electronics</h2>
-        <div class="subcategory">
-            <fieldset> 
-            <h3>Laptops</h3>
-            <div class="product-container">
-                <!-- Product Listing for Laptops -->
-                <div class="product">
-                    <img src="images/laptop1.jpeg" alt="Laptop" >
-                   <!-- Update the link for each laptop -->
-<a href="reviews.html" class="product-link" data-product="laptop1">
-    <p>Click Here</p>
-</a>               
-                    <p>Description: Powerful laptop for all your computing needs.</p>
-                    <p>Price: $800</p>
-                    <p>Seller: John Doe</p>
-                    <button class="btn">Add to Cart</button>
-                    <button class="btn">Add to Wishlist</button>
-                </div>
-                <!-- Additional Laptop Images -->
-                <div class="product">
-                    <img src="images/laptop2_177x236_1_50.jpeg" alt="Laptop 2">
-                    <p>Description: Additional laptop description.</p>
-                    <p>Price: $900</p>
-                    <p>Seller: Jane Smith</p>
-                    <button class="btn">Add to Cart</button>
-                    <button class="btn">Add to Wishlist</button>&nbsp
-                </div> &nbsp
-                &nbsp
-                
-                <div class="product">
-                    <img src="images/laptop3_177x236.jpeg" alt="Laptop 3">
-                    <p>Description: Another additional laptop description.</p>
-                    <p>Price: $950</p>
-                    <p>Seller: Mike Johnson</p>
-                    <button class="btn">Add to Cart</button>
-                    <button class="btn">Add to Wishlist</button>
-                </div>
-                <div class="product">
-                    <img src="images/laptop4_177x236.jpeg" alt="Laptop 4">
-                    <p>Description: Yet another additional laptop description.</p>
-                    <p>Price: $850</p>
-                    <p>Seller: Emily Brown</p>
-                    <button class="btn">Add to Cart</button>
-                    <button class="btn">Add to Wishlist</button>
-                </div>
-                <div class="product">
-                    <img src="images/laptop5.jpeg" alt="Laptop 5">
-                    <p>Description: Final additional laptop description.</p>
-                    <p>Price: $920</p>
-                    <p>Seller: Mark Taylor</p>
-                    <button class="btn">Add to Cart</button>
-                    <button class="btn">Add to Wishlist</button>
-                </div>
+  
+
+<div class="container">
+        <header>
+            <div class="title">PRODUCT LIST</div>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <span>0</span>
             </div>
+        </header>
 
-        </div>
-    </fieldset>
-    </section>
-    
-
-
-    <div class="subcategory">
-        <h3>Smartphones</h3>
-        <!-- Product Listing for Smartphones -->
-        <div class="product">
-            <img src="images/smartphone_image.jpg" alt="Smartphone">
-            <p>Description: High-performance smartphone with advanced features.</p>
-            <p>Price: $500</p>
-            <p>Seller: Jane Smith</p>
-            <button class="btn">Add to Cart</button>
-            <button class="btn">Add to Wishlist</button>
-        </div>
-        <!-- Additional Smartphone Images -->
-        <img src="images/smartphone_image_2.jpg" alt="Smartphone 2">
-        <img src="images/smartphone_image_3.jpg" alt="Smartphone 3">
-        <img src="images/smartphone_image_4.jpg" alt="Smartphone 4">
-        <img src="images/smartphone_image_5.jpg" alt="Smartphone 5">
-    </div>
-
-    <div class="subcategory">
-        <h3>Tablets</h3>
-        <!-- Product Listing for Tablets -->
-        <div class="product">
-            <img src="images/tablet_image.jpg" alt="Tablet">
-            <p>Description: Lightweight and portable tablet for on-the-go productivity.</p>
-            <p>Price: $300</p>
-            <p>Seller: Mike Johnson</p>
-            <button class="btn">Add to Cart</button>
-            <button class="btn">Add to Wishlist</button>
-        </div>
-        <!-- Additional Tablet Images -->
-        <img src="images/tablet_image_2.jpg" alt="Tablet 2">
-        <img src="images/tablet_image_3.jpg" alt="Tablet 3">
-        <img src="images/tablet_image_4.jpg" alt="Tablet 4">
-        <img src="images/tablet_image_5.jpg" alt="Tablet 5">
-    </div>
-
-    <div class="subcategory">
-        <fieldset>
-        <h3>Headphones</h3>
-        <!-- Product Listing for Headphones -->
-        <div class="product">
-            <img src="images/headphones_image.jpg" alt="Headphones">
-            <p>Description: Over-ear headphones with immersive sound quality.</p>
-            <p>Price: $100</p>
-            <p>Seller: Emily Brown</p>
-            <button class="btn">Add to Cart</button>
-            <button class="btn">Add to Wishlist</button>
-        </div>
-        <!-- Additional Headphones Images -->
-        <img src="images/headphones_image_2.jpg" alt="Headphones 2">
-        <img src="images/headphones_image_3.jpg" alt="Headphones 3">
-        <img src="images/headphones_image_4.jpg" alt="Headphones 4">
-        <img src="images/headphones_image_5.jpg" alt="Headphones 5">
-    </div>
-    </fieldset>
-<title>Marquee Tag</title> 
-
-<div class="main"> 
-    <marquee class="marq" bgcolor="orange" 
-             direction="left" loop=""> 
-        <div class="geek1"> 
-           THANKS FOR USING THAPAREX :)
-        </div> 
         
-        <div class="geek2">
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; BUY &nbsp;&nbsp;&nbsp;SELL &nbsp;&nbsp;&nbsp;SHARE
+        <div class="listProduct">
+
         </div>
-        <div class="geek2"> 
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;Thapar  Univesity   &nbsp;  &nbsp;&nbsp;Connect &nbsp; Portal
-         </div> 
-    </marquee> 
-</div> 
+    </div>
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+            
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">Check Out</button>
+        </div>
+    </div>
+
 
 <footer>
     <div class="footer-container">
@@ -196,80 +95,12 @@ Miscellaneous
     </div>
 </footer>
 </section>
-{{!-- <script src="src/script.js" >
-    </script> --}}
-</body>
-<style> 
-    .logout-button {
-           
-    background-color: #6daaea; /* Change the background color */
-    color: #fff; /* Change the text color */
-    border: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border-radius: 150px;
-    padding: 5px 10px; /* Adjust padding to reduce size */
-    font-size: 18px; /* Adjust font size to reduce size */
-    cursor: pointer;
-    
-    top: 280px; /* Adjust as needed */
-    right: 10px; /* Position it at the extreme right */
-    position:static
 
-}   
-#pic
-{
-    width: 120px; /* Set the width of the picture */
-    height: 120px; /* Set the height of the picture */
-    background-color: #6daaea; /* Change the background color */
-    color: #fff; /* Change the text color */
-    border: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border-radius: 150px;
-    padding: 5px 10px; /* Adjust padding to reduce size */
-    font-size: 8px; /* Adjust font size to reduce size */
-    cursor: pointer;
-    position: relative;
-    top: 7px; /* Adjust as needed */
-    left: 2px;
-}
-    .main { 
-        text-align: center; 
-    } 
-
-    .marq { 
-        padding-top: 30px; 
-        padding-bottom: 30px; 
-    } 
-
-    .geek1 { 
-        font-size: 36px; 
-        font-weight: bold; 
-        color: white; 
-        padding-bottom: 10px; 
-    } 
-
-    .miscellaneous {
-    display: flex;
-    flex-wrap: wrap;
-}
- #productImage
-{
-    background-color: #ffffff; /* Change background color */
-            color: #fff; /* Change text color */
-            padding: 10px 20px; /* Adjust padding as needed */
-            border: none;
-            border-radius: 5px;
-            font-size: 15px; /* Change font size */
-            font-weight: bold; /* Add bold font */
-            text-transform: uppercase; /* Convert text to uppercase */
-            cursor: pointer;
-            display: inline-block;
-            
-            transition: background-color 0.3s ease; 
-}
-</style> 
 <script>
-    const addProductBtn = document.getElementById('addProductButton')
+
+console.log("Welcome");
+
+const addProductBtn2 = document.getElementById('addProductButton')
 function addProduct() {
     console.log('fn called')
     const productPrice = document.getElementById('productPrice').value;
@@ -279,17 +110,6 @@ function addProduct() {
     const productImageInput = document.getElementById('productImage');
     console.log('fn4 called')
     const productImage = productImageInput.files[0]; // Get the selected image file
-    {{!-- console.log("type of obj:  ",typeof(productImage)) --}}
-
-    {{!-- const imagePath = '/images/instaa.png';
-
-    // Create an Image element
-    const productImage = new Image();
-
-    // Set the source of the Image element to the specified path
-    productImage.src = imagePath; --}}
-
-
     // Update the UI with the added product in the "Miscellaneous" section
     updateMiscellaneous(productPrice, productDescription, productImage);
 
@@ -298,14 +118,10 @@ function addProduct() {
     document.getElementById('productDescription').value = "";
     productImageInput.value = ""; // Clear the file input
 }
-addProductBtn.addEventListener("click", () => {
+addProductBtn2.addEventListener("click", () => {
     console.log("another fn callled")
     addProduct();
 })
-
-
-
-
 
 function updateMiscellaneous(name, description, image) {
     // Create a new product container
@@ -336,8 +152,158 @@ function updateMiscellaneous(name, description, image) {
 
     // Append the new product container to the "Miscellaneous" section
     document.getElementById('miscellaneous').appendChild(productContainer);
+
+
+
+    let listProductHTML = document.querySelector('.listProduct');
+let listCartHTML = document.querySelector('.listCart');
+let iconCart = document.querySelector('.icon-cart');
+let iconCartSpan = document.querySelector('.icon-cart span');
+let body = document.querySelector('body');
+let closeCart = document.querySelector('.close');
+let products = [];
+let cart = [];
+
+
+iconCart.addEventListener('click', () => {
+    body.classList.toggle('showCart');
+})
+closeCart.addEventListener('click', () => {
+    body.classList.toggle('showCart');
+})
+
+    const addDataToHTML = () => {
+    // remove datas default from HTML
+
+        // add new datas
+        if(products.length > 0) // if has data
+        {
+            products.forEach(product => {
+                let newProduct = document.createElement('div');
+                newProduct.dataset.id = product.id;
+                newProduct.classList.add('item');
+                newProduct.innerHTML = 
+                `<img src="${product.image}" alt="">
+                <h2>${product.name}</h2>
+                <div class="price">$${product.price}</div>
+                <button class="addCart">Add To Cart</button>`;
+                listProductHTML.appendChild(newProduct);
+            });
+        }
+    }
+    listProductHTML.addEventListener('click', (event) => {
+        let positionClick = event.target;
+        if(positionClick.classList.contains('addCart')){
+            let id_product = positionClick.parentElement.dataset.id;
+            addToCart(id_product);
+        }
+    })
+const addToCart = (product_id) => {
+    let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
+    if(cart.length <= 0){
+        cart = [{
+            product_id: product_id,
+            quantity: 1
+        }];
+    }else if(positionThisProductInCart < 0){
+        cart.push({
+            product_id: product_id,
+            quantity: 1
+        });
+    }else{
+        cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
+    }
+    addCartToHTML();
+    addCartToMemory();
+}
+const addCartToMemory = () => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+const addCartToHTML = () => {
+    listCartHTML.innerHTML = '';
+    let totalQuantity = 0;
+    if(cart.length > 0){
+        cart.forEach(item => {
+            totalQuantity = totalQuantity +  item.quantity;
+            let newItem = document.createElement('div');
+            newItem.classList.add('item');
+            newItem.dataset.id = item.product_id;
+
+            let positionProduct = products.findIndex((value) => value.id == item.product_id);
+            let info = products[positionProduct];
+            listCartHTML.appendChild(newItem);
+            newItem.innerHTML = `
+            <div class="image">
+                    <img src="${info.image}">
+                </div>
+                <div class="name">
+                ${info.name}
+                </div>
+                <div class="totalPrice">$${info.price * item.quantity}</div>
+                <div class="quantity">
+                    <span class="minus"><</span>
+                    <span>${item.quantity}</span>
+                    <span class="plus">></span>
+                </div>
+            `;
+        })
+    }
+    iconCartSpan.innerText = totalQuantity;
 }
 
+listCartHTML.addEventListener('click', (event) => {
+    let positionClick = event.target;
+    if(positionClick.classList.contains('minus') || positionClick.classList.contains('plus')){
+        let product_id = positionClick.parentElement.parentElement.dataset.id;
+        let type = 'minus';
+        if(positionClick.classList.contains('plus')){
+            type = 'plus';
+        }
+        changeQuantityCart(product_id, type);
+    }
+})
+const changeQuantityCart = (product_id, type) => {
+    let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
+    if(positionItemInCart >= 0){
+        let info = cart[positionItemInCart];
+        switch (type) {
+            case 'plus':
+                cart[positionItemInCart].quantity = cart[positionItemInCart].quantity + 1;
+                break;
+        
+            default:
+                let changeQuantity = cart[positionItemInCart].quantity - 1;
+                if (changeQuantity > 0) {
+                    cart[positionItemInCart].quantity = changeQuantity;
+                }else{
+                    cart.splice(positionItemInCart, 1);
+                }
+                break;
+        }
+    }
+    addCartToHTML();
+    addCartToMemory();
+}
 
-</script>
+const initApp = () => {
+    // get data product
+    fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+        products = data;
+        addDataToHTML();
+
+        // get data cart from memory
+        if(localStorage.getItem('cart')){
+            cart = JSON.parse(localStorage.getItem('cart'));
+            addCartToHTML();
+        }
+    })
+}
+initApp();
+}</script>
+
+    {{!-- <script src="script.js"></script> --}}
+
+</body>
 </html>
