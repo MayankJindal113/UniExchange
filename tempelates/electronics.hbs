@@ -161,7 +161,7 @@ function updateMiscellaneous(name, description, image)
         }
         
 
-        document.getElementById('wrapper').appendChild(productContainer);
+        document.getElementById('products').appendChild(productContainer);
 
         }
 
@@ -229,7 +229,6 @@ function updateMiscellaneous(name, description, image)
             ],
         };
         
-        console.log("THis is the new code");
         for (let i of products.data) {
             let card = document.createElement("div");
             card.classList.add("card", i.category, "hide");
@@ -238,10 +237,7 @@ function updateMiscellaneous(name, description, image)
             let image = document.createElement("img");
             image.setAttribute("src", i.image);
             imgContainer.appendChild(image);
-            card.appendChild(imgContainer);
-
-        console.log("THis is inside the for loop");
-            
+            card.appendChild(imgContainer);            
             let container = document.createElement("div");
             container.classList.add("container");
             let name = document.createElement("h5");
@@ -251,7 +247,6 @@ function updateMiscellaneous(name, description, image)
             let price = document.createElement("h6");
             price.innerText =  i.price + "Rs";
             container.appendChild(price);
-        
             card.appendChild(container);
             document.getElementById("products").appendChild(card);
         }
