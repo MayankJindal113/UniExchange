@@ -22,7 +22,7 @@ app.use(express.static(publicPath))
 
 
 app.get('/signup', (req, res) => {
-    res.render('login')
+    res.render('login') 
 })
 app.get('/', (req, res) => {
     res.render('login')
