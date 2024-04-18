@@ -1,0 +1,51 @@
+[
+  {
+    "name": "",
+    "price": "",
+    "image": "/images/laptop1.jpeg",
+    "category": "Topwear"
+  },
+  
+  {
+    "name": "Beige Short Skirt",
+    "category": "Bottomwear",
+    "price": "49",
+    "image": "/images/2.png"
+  },
+  {
+    "name": "Sporty SmartWatch",
+    "category": "Watch",
+    "price": "99",
+    "image": "/images/3.png"
+  },
+  {
+    "name": "Basic Knitted Top",
+    "category": "Topwear",
+    "price": "29",
+    "image": "/images/4.png"
+  },
+  {
+    "name": "Black Leather Jacket",
+    "category": "Jacket",
+    "price": "129",
+    "image": "/images/5.png"
+  },
+  {
+    "name": "Stylish Pink Trousers",
+    "category": "Bottomwear",
+    "price": "89",
+    "image": "/images/6.png"
+  },
+  {
+    "name": "Brown Men's Jacket",
+    "category": "Jacket",
+    "price": "189",
+    "image": "/images/7.png"
+  },
+  {
+    "name": "Comfy Gray Pants",
+    "category": "Bottomwear",
+    "price": "49",
+    "image": "/images/8.png"
+  }
+]

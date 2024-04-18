@@ -1,6 +1,6 @@
 const express = require("express")
 const path = require("path")
-// app is an instance of express (an http server)
+const fs = require('fs')
 const app = express()
 // const hbs = require("hbs")
 const LogInCollection = require("./mongo")
@@ -34,6 +34,60 @@ app.get('/home', (req, res) =>{
         naming: req.body.name
     })  
 })
+
+
+app.get('/products', (req, res) => {
+    try {
+        const products = JSON.parse(fs.readFileSync('src/products.json'));
+        res.json(products);
+    } catch (error) {
+        console.error('Error reading products:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+// Endpoint to handle POST requests to add a product
+// app.post('/products', (req, res) => {
+//     const newProduct = req.body;
+
+//     // Read existing data from src/products.json
+//     const products = JSON.parse(fs.readFileSync('src/products.json'));
+
+//     // Add the new product
+//     products.push(newProduct);
+
+//     // Write updated data back to src/products.json
+//     fs.writeFileSync('src/products.json', JSON.stringify(products, null, 2));
+
+//     res.send('Product added successfully!');
+// });
+
+app.post('/products', (req, res) => {
+    try {
+        const newProduct = req.body;
+        console.log(newProduct)
+        // Read existing data from src/products.json
+        fs.readFile('src/products.json', (err, data) => {
+            if (err) throw err;
+
+            const products = JSON.parse(data);
+
+            // Add the new product
+            products.unshift(newProduct);
+
+            // Write updated data back to src/products.json
+            fs.writeFile('src/products.json', JSON.stringify(products, null, 2), (err) => {
+                if (err) throw err;
+                res.send('Product added successfully!');
+            });
+        });
+    } catch (error) {
+        console.error('Error adding product:', error);
+        res.status(500).send('Error adding product');
+    }
+});
+
+
 // in get request user ask 
 
 
