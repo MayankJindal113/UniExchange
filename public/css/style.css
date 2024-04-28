@@ -1,5 +1,6 @@
 #one
 {
+    
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body {
@@ -11,10 +12,13 @@ body {
 }
 
 header {
-    background-color: #0b4bb0; /* Dark Green Header */
+    background-color: #787b81; /* Dark Green Header */
     color: #ffffff;
     padding: 10px;
     text-align: center;
+    display: flex;
+    /* position: stick; */
+    /* gap: 200px; */
 }
 
 nav {
@@ -37,22 +41,61 @@ section {
     padding: 20px;
 }
 
-.category {
-    background-color: #e1f5fe; /* Light Blue Category Background */
+/* .Category {
+    background-color: #e1f5fe; 
     padding: 10px;
     margin: 10px 0;
-}
+} */
 
-.product {
+/* .product {
     background-color: #ffffff;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #e1f5fe; /* Light Blue Border */
+    border: 1px solid #e1f5fe; 
     border-radius: 5px;
+} */
+
+
+
+.sellItem {
+  display: none;
+  position: absolute;
+  top: 75px;
+  right: 10px;
+  z-index: 1;
+  background-color: #ccc;
+  width: 300px; /* Adjust width as needed */
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 28px;
 }
 
+
+.add-product-form select,
+.add-product-form input[type="text"],
+.add-product-form input[type="file"],
+.add-product-form button {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.add-product-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.add-product-form button:hover {
+  background-color: #0056b3;
+}
+
+
+
 .btn {
-    background-color: rgb(0, 79, 34); /* Medium Blue-Green Button */
+    background-color: rgb(0, 79, 34); 
     color: #ffffff;
     padding: 8px 12px;
     border: none;
@@ -162,6 +205,7 @@ footer {
 input[type="text"] {
     padding: 8px;
     font-size: 16px;
+    /* color: black; */
 }
 
 button {
@@ -198,18 +242,11 @@ button {
 }   
 #pic
 {
-    width: 120px; /* Set the width of the picture */
-    height: 120px; /* Set the height of the picture */
-    background-color: #6daaea; /* Change the background color */
-    color: #fff; /* Change the text color */
-    border: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border-radius: 150px;
-    padding: 5px 10px; /* Adjust padding to reduce size */
-    font-size: 8px; /* Adjust font size to reduce size */
+    width: 205px;
+    height: 77px;
     cursor: pointer;
     position: relative;
-    top: 7px; /* Adjust as needed */
+    top: 3px; /* Adjust as needed */
     left: 2px;
 }
     .main { 
@@ -252,13 +289,26 @@ button {
 .wrapper {
     width: 95%;
     margin: 0 auto;
+    /* background-color: rgb(6, 201, 175); */
+
   }
+
+
+  .buttons{
+    /* background-color: rgb(81, 179, 254); */
+    margin-left:300px;
+    color: #110f29;
+  }
+
   #search-container {
-    margin: 1em 0;
+    width: 100%;
+    margin-left: 0;
+    /* margin: 0 auto; */
+    /* margin: 1em 0; */
   }
   #search-container input {
-    background-color: transparent;
-    width: 40%;
+    background-color: white;
+    width: 55%;
     border-bottom: 2px solid #110f29;
     padding: 1em 0.3em;
   }
@@ -273,21 +323,68 @@ button {
     border-radius: 5px;
     margin-top: 0.5em;
   }
+/* 
+  #search-input{
+    width: 40%;
+  } */
+  #search{
+    height: 40px;
+    position: relative;
+    top: 13px;
+  }
+ #Language{
+  padding: 1em 0.3em;
+  top: 10px;
+  background-color:#787b81;
+  height: 50px;
+  margin-right: 14px;
+  position:relative;
+  font-weight: bold;
+ }
+
+  .sell-button {
+    background-color: #ffffff;
+    /* border: none; */
+    color: rgb(0, 0, 0);
+    padding: 0px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 1rem;
+    border-color: black;
+    border-radius: 35px;
+  }
+  .newsvg{
+    height: 40px;
+    position: relative;
+    /* right: 50px; */
+    top: 13px;
+    margin-right:14px ;
+  }
   .button-value {
-    border: 2px solid #6759ff;
+    /* border: 2px solid #6759ff; */
     padding: 1em 2.2em;
     border-radius: 3em;
     background-color: transparent;
-    color: #6759ff;
+    color: #000000;
     cursor: pointer;
+    font-weight: bold;
   }
-  .active {
-    background-color: #6759ff;
+
+ 
+
+
+  /* .active {
+    background-color: rgb(1, 88, 76);
     color: #ffffff;
-  }
+  } */
   #products {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     grid-column-gap: 1.5em;
     padding: 2em 0;
   }
