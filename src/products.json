@@ -1,21 +1,16 @@
 [
+ 
   {
-    "name": "New",
-    "price": "1002",
+    "name": "may",
+    "price": "14545",
+    "image": "/images/laptop1.jpeg",
+    "category": "Vehicles"
+  },
+  {
+    "name": "Lenove S215",
+    "price": "65000",
     "image": "/images/laptop1.jpeg",
     "category": "Electronics"
-  },
-  {
-    "name": "Book",
-    "price": "200",
-    "image": "/images/laptop1.jpeg",
-    "category": "Academics"
-  },
-  {
-    "name": "Yash",
-    "price": "5400",
-    "image": "/images/laptop1.jpeg",
-    "category": "Clothing"
   },
   {
     "name": "Lenoveo",

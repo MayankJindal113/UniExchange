@@ -1,9 +1,11 @@
 const express = require("express")
 const path = require("path")
-const fs = require('fs')
+const mongoose = require("mongoose")
 const app = express()
+
 // const hbs = require("hbs")
-const LogInCollection = require("./mongo")
+const {LogInCollection} = require("./mongo")
+const {Product} = require("./mongo")
 const port = process.env.PORT || 3000
 app.use(express.json())
 
@@ -36,54 +38,33 @@ app.get('/home', (req, res) =>{
 })
 
 
-app.get('/products', (req, res) => {
+app.get('/products', async (req, res) => {
     try {
-        const products = JSON.parse(fs.readFileSync('src/products.json'));
-        res.json(products);
+        const allProducts = await Product.find({});
+        if(!allProducts){
+            throw new Error('No products found');
+        }
+        // const products = JSON.parse(fs.readFileSync('src/products.json'));
+        res.status(201).json(allProducts);
     } catch (error) {
         console.error('Error reading products:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(500).json({ error });
     }
 });
 
-// Endpoint to handle POST requests to add a product
-// app.post('/products', (req, res) => {
-//     const newProduct = req.body;
 
-//     // Read existing data from src/products.json
-//     const products = JSON.parse(fs.readFileSync('src/products.json'));
-
-//     // Add the new product
-//     products.push(newProduct);
-
-//     // Write updated data back to src/products.json
-//     fs.writeFileSync('src/products.json', JSON.stringify(products, null, 2));
-
-//     res.send('Product added successfully!');
-// });
-
-app.post('/products', (req, res) => {
+app.post('/products', async (req, res) => {
+    console.log("adding")
     try {
-        const newProduct = req.body;
-        console.log(newProduct)
-        // Read existing data from src/products.json
-        fs.readFile('src/products.json', (err, data) => {
-            if (err) throw err;
-
-            const products = JSON.parse(data);
-
-            // Add the new product
-            products.unshift(newProduct);
-
-            // Write updated data back to src/products.json
-            fs.writeFile('src/products.json', JSON.stringify(products, null, 2), (err) => {
-                if (err) throw err;
-                res.send('Product added successfully!');
-            });
-        });
+        const productDetails = req.body;
+        console.log(productDetails)
+        const newProduct = new Product(productDetails);
+        await newProduct.save();
+        res.status(201).json({ success: true, message: 'Product added successfully!' });
+      
     } catch (error) {
         console.error('Error adding product:', error);
-        res.status(500).send('Error adding product');
+        res.status(500).json({success: false, error: error.message})
     }
 });
 
@@ -161,3 +142,33 @@ app.get('/logout', (req, res) => {
 app.listen(port, () => {
     console.log('port connected');
 })
+
+
+// Endpoint to handle POST requests to add a product
+// app.post('/products', (req, res) => {
+//     const newProduct = req.body;
+
+//     // Read existing data from src/products.json
+//     const products = JSON.parse(fs.readFileSync('src/products.json'));
+
+//     // Add the new product
+//     products.push(newProduct);
+
+//     // Write updated data back to src/products.json
+//     fs.writeFileSync('src/products.json', JSON.stringify(products, null, 2));
+
+//     res.send('Product added successfully!');
+// });
+  // fs.readFile('src/products.json', (err, data) => {
+        //     if (err) throw err;
+
+        //     const products = JSON.parse(data);
+
+        //     // Add the new product
+        //     products.unshift(newProduct);
+
+        //     // Write updated data back to src/products.json
+        //     fs.writeFile('src/products.json', JSON.stringify(products, null, 2), (err) => {
+        //         if (err) throw err;
+        //     });
+        // });

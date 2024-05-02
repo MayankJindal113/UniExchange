@@ -21,6 +21,22 @@ header {
     /* gap: 200px; */
 }
 
+.logout-button {
+  background-color: #fff; /* Change the background color */
+  color: black; /* Change the text color */
+  border: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 150px;
+  padding: 24px 10px; /* Adjust padding to reduce size */
+  font-size: 18px; /* Adjust font size to reduce size */
+  cursor: pointer;
+  top: 280px; /* Adjust as needed */
+  right: 10px; /* Position it at the extreme right */
+  position: static;
+} 
+
+
+
 nav {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color:rgb(1, 148, 156); /* Medium Blue-Green Navigation Bar */
@@ -41,11 +57,9 @@ section {
     padding: 20px;
 }
 
-/* .Category {
-    background-color: #e1f5fe; 
-    padding: 10px;
-    margin: 10px 0;
-} */
+#Category {
+    width: 97%;
+}
 
 /* .product {
     background-color: #ffffff;
@@ -61,7 +75,7 @@ section {
   display: none;
   position: absolute;
   top: 75px;
-  right: 10px;
+  right: 100px;
   z-index: 1;
   background-color: #ccc;
   width: 300px; /* Adjust width as needed */
@@ -71,6 +85,25 @@ section {
 }
 
 
+.sellItem select,
+.sellItem input[type="text"],
+.sellItem input[type="file"],
+.sellItem input[type="number"],
+.sellItem button,
+.sellItem textarea
+{
+  display: block;
+  margin-bottom: 15px;
+  /* width: 76%; */
+  width: 89%;
+  margin-right: auto;
+  padding: 10px;
+  color: black;
+}
+
+
+
+/* 
 .add-product-form select,
 .add-product-form input[type="text"],
 .add-product-form input[type="file"],
@@ -78,7 +111,13 @@ section {
   display: block;
   margin-bottom: 15px;
   width: 100%;
-}
+  padding: 10px;
+  color: black;
+} */
+
+
+
+
 
 .add-product-form button {
   background-color: #007bff;
@@ -86,6 +125,7 @@ section {
   border: none;
   padding: 10px 0;
   cursor: pointer;
+  margin: auto;
 }
 
 .add-product-form button:hover {
@@ -223,23 +263,6 @@ button {
 }
 
 
-
-.logout-button {
-           
-    background-color: #6daaea; /* Change the background color */
-    color: #fff; /* Change the text color */
-    border: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border-radius: 150px;
-    padding: 5px 10px; /* Adjust padding to reduce size */
-    font-size: 18px; /* Adjust font size to reduce size */
-    cursor: pointer;
-    
-    top: 280px; /* Adjust as needed */
-    right: 10px; /* Position it at the extreme right */
-    position:static
-
-}   
 #pic
 {
     width: 205px;
@@ -269,28 +292,31 @@ button {
     display: flex;
     flex-wrap: wrap;
 }
- #productImage
+#productImage
 {
-    background-color: #ffffff; /* Change background color */
-            color: #fff; /* Change text color */
-            padding: 10px 20px; /* Adjust padding as needed */
-            border: none;
-            border-radius: 5px;
-            font-size: 15px; /* Change font size */
-            font-weight: bold; /* Add bold font */
-            text-transform: uppercase; /* Convert text to uppercase */
-            cursor: pointer;
-            display: inline-block;
-            transition: background-color 0.3s ease ;
+    background-color: #ffffff;  
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    font-size: 15px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    cursor: pointer;
+    display: inline-block;
+    width: 83%;
+    transition: background-color 0.3s ease ;
 }
 
+
 /* Code For Filter:: */
+
 
 .wrapper {
     width: 95%;
     margin: 0 auto;
-    /* background-color: rgb(6, 201, 175); */
-
+    display: flex;
+    flex-direction: column;
   }
 
 
@@ -323,10 +349,7 @@ button {
     border-radius: 5px;
     margin-top: 0.5em;
   }
-/* 
-  #search-input{
-    width: 40%;
-  } */
+
   #search{
     height: 40px;
     position: relative;
@@ -353,6 +376,7 @@ button {
     font-size: 17px;
     font-weight: bold;
     margin: 2px 1px;
+    margin-right: 20px ;
     cursor: pointer;
     border-radius: 1rem;
     border-color: black;
@@ -375,9 +399,23 @@ button {
     font-weight: bold;
   }
 
- 
+ .priceFilter{
+  margin-top: 20px;
+ }
 
-
+  #price{
+    padding: 0.5em 0.1em;
+    /* top: 10px; */
+    height: 40px;
+    margin-right: 14px;
+    border-radius: 5px;
+    position:relative;
+    font-weight: bold;
+  }
+  option {
+    padding : 10px;
+    font-size: 15px;
+  }
   /* .active {
     background-color: rgb(1, 88, 76);
     color: #ffffff;
